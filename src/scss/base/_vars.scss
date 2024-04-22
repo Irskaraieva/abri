@@ -1,0 +1,15 @@
+:root {
+    --container-width: 1230px;
+    --container-padding: 15px;
+
+    --page-bg: white;
+    --text-color: #000;
+
+    --font-main: 'Noto Sans', sans-serif;
+    --font-text: 'Sedan', serif;
+}
+
+.dark {
+    --page-bg: rgb(59, 71, 75);
+    --text-color: #e3f4f7;
+}

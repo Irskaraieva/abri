@@ -1,0 +1,236 @@
+// footer
+
+.footer {
+  background-color: rgb(24, 46, 65);
+  text-align: center;
+  font-size: 2.4rem;
+  padding: 20px 0px;
+  align-items: center;
+  color: white;
+  margin-top: auto;
+  z-index: 0;
+
+  @media (max-width: 1000px) {
+    font-size: 2rem;
+  }
+}
+
+.footer-container {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 15px;
+  padding-left: 240px;
+}
+
+.footer-brand {
+  position: absolute;
+  top: 0px;
+  left: 30px;
+}
+
+.logo {
+  max-height: 35px;
+}
+
+.footer-container-2,
+.footer-container-3,
+.footer-container-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  transition: 0.3s;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.footer-icons {
+  position: absolute;
+  bottom: 50%;
+  left: 30px;
+  height: 30px;
+  width: 154px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-icons img {
+  width: 30px;
+  height: auto;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.footer-icons img:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.copy-rights {
+  position: absolute;
+  bottom: 0;
+  left: 30px;
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #857885;
+}
+
+.footer-container h4 {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  color: white;
+  transition: 0.3s;
+}
+
+.footer-container-2 h4:hover,
+.footer-container-3 h4:hover,
+.footer-container-4 h4:hover {
+  color: rgb(161, 158, 158);
+  cursor: pointer;
+}
+
+.servies-header,
+.products-header,
+.company-header {
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.servies-header:hover,
+.products-header:hover,
+.company-header:hover {
+  cursor: pointer;
+}
+
+.servies-header:hover .arrow-down,
+.products-header:hover .arrow-down,
+.company-header:hover .arrow-down {
+  color: rgb(202, 204, 207);
+}
+
+.arrow-down {
+  display: none;
+  padding-top: 4px;
+  font-size: 1rem;
+  font-weight: 100;
+  color: white;
+  transition: 0.3s;
+}
+
+.arrow-up {
+  transform: rotate(180deg);
+  transition: 0.3s ease;
+}
+
+.footer-container-2 a,
+.footer-container-3 a,
+.footer-container-4 a {
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 25px;
+  font-weight: 700;
+  color: #857885;
+  transition: 0.3s;
+}
+
+.footer-container a:hover {
+  color: #e4d8e4;
+}
+
+@media (max-width: 840px) {
+
+  .footer {
+    padding-bottom: 0;
+  }
+
+  .footer-container {
+    padding-top: 90px;
+    padding-left: 0px;
+    padding-bottom: 120px;
+    height: max-content;
+  }
+
+  .footer-brand {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  .footer-icons {
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  .copy-rights {
+    height: 30px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .copy-rights p {
+    display: inline-block;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 680px) {
+
+  .footer-container {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 60px;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .arrow-down {
+    display: block;
+  }
+
+  .footer-brand {
+    left: 30px;
+    right: inherit;
+  }
+
+  .footer-list {
+    display: none;
+    height: 0%;
+    overflow: hidden;
+    transition: height 0.9s ease;
+  }
+
+  .servies-header:hover h4,
+  .products-header:hover h4,
+  .company-header:hover h4 {
+    color: rgb(161, 158, 158);
+  }
+
+  .visible-list {
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    transition: height 0.9s ease;
+  }
+
+  .footer-icons img {
+    width: auto;
+    height: 20px;
+
+  }
+}
