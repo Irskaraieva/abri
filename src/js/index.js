@@ -7,12 +7,15 @@
 // console.log(hello);
 import mobileNav from './modules/mobile-nav.js';
 import footerLists from './modules/footer.js';
+import player from './modules/player.js';
+
 const nav = document.getElementById('nav');
 const navMobBtn = document.getElementById('nav-mob-btn');
 const navLinks = document.querySelectorAll('.nav-list li');
 
 mobileNav();
 footerLists();
+player();
 
 navLinks.forEach(li => {
     li.addEventListener('click', () => {
@@ -32,9 +35,5 @@ window.addEventListener('resize', function () {
         nav.style.display = 'none';
     }
 });
-
-
-
-
 
 
