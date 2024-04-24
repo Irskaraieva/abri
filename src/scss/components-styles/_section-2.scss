@@ -1,24 +1,26 @@
-.section-2 {
-  padding: 20px 0px;
+.section-2 {  
   width: 100%;
   background-color: rgb(222, 241, 247);
 
   .offers {
-    padding-bottom: 60px;
-    padding-top: 60px;
-    display: flex;
-    justify-content: space-between;
+    padding: 0px 15px 60px;
+
 
     .offer {
       width: 30%;
       position: relative;
+      margin-top: 70px;
+      height: calc(300px + (420 - 300) * ((100vw - 320px) / 2000));
 
+      @media (max-width: 900px) {
+        margin-top: 50px;
+      }
 
       &:hover {
         cursor: pointer;
         
           .figcaption {
-            bottom: 5%;
+            bottom: -2%;
           }
 
           img {
@@ -29,10 +31,12 @@
 
     figure {
       width: 100%;
-      height: 420px;
+      height: 100%;
+
       position: relative;
       transition: all .3s;
       overflow: hidden;
+
     }
 
     img {
@@ -66,18 +70,40 @@
       transition: all .3s;
 
       h4 {
-        font-size: calc(18px + (24 - 18) * ((100vw - 320px) / 1300));
+        font-size: calc(20px + (20 - 16) * ((100vw - 360px) / 2100));
         font-weight: 600;
+        text-transform: capitalize;
+        overflow: hidden;        
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        @media (max-width: 1200px) {
+          font-size: 18px
+        }
       }
 
       p {
         line-height: 26px;
+        max-width: 270px;
         color: rgba(0, 0, 0, 0.63);
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+
+        @media (max-width: 1200px) {
+          font-size: 14px
+        }
       }
 
       .price {
-        font-size: 18px;
+        font-size: clamp(1rem, 1.0139rem + 0.5556vw, 18px);
         color: rgb(53, 53, 53);
+
+        @media (max-width: 1200px) {
+          font-size: 16px
+        }
       }
 
       .line {

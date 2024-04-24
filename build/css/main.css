@@ -757,32 +757,35 @@ label {
 }
 
 .section-2 {
-  padding: 20px 0px;
   width: 100%;
   background-color: rgb(222, 241, 247);
 }
 .section-2 .offers {
-  padding-bottom: 60px;
-  padding-top: 60px;
-  display: flex;
-  justify-content: space-between;
+  padding: 0px 15px 60px;
 }
 .section-2 .offers .offer {
   width: 30%;
   position: relative;
+  margin-top: 70px;
+  height: calc(300px + 120 * (100vw - 320px) / 2000);
+}
+@media (max-width: 900px) {
+  .section-2 .offers .offer {
+    margin-top: 50px;
+  }
 }
 .section-2 .offers .offer:hover {
   cursor: pointer;
 }
 .section-2 .offers .offer:hover .figcaption {
-  bottom: 5%;
+  bottom: -2%;
 }
 .section-2 .offers .offer:hover img {
   transform: scale(1.02);
 }
 .section-2 .offers figure {
   width: 100%;
-  height: 420px;
+  height: 100%;
   position: relative;
   transition: all 0.3s;
   overflow: hidden;
@@ -817,16 +820,41 @@ label {
   transition: all 0.3s;
 }
 .section-2 .offers .figcaption h4 {
-  font-size: calc(18px + 6 * (100vw - 320px) / 1300);
+  font-size: calc(20px + 4 * (100vw - 360px) / 2100);
   font-weight: 600;
+  text-transform: capitalize;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@media (max-width: 1200px) {
+  .section-2 .offers .figcaption h4 {
+    font-size: 18px;
+  }
 }
 .section-2 .offers .figcaption p {
   line-height: 26px;
+  max-width: 270px;
   color: rgba(0, 0, 0, 0.63);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+}
+@media (max-width: 1200px) {
+  .section-2 .offers .figcaption p {
+    font-size: 14px;
+  }
 }
 .section-2 .offers .figcaption .price {
-  font-size: 18px;
+  font-size: clamp(1rem, 1.0139rem + 0.5556vw, 18px);
   color: rgb(53, 53, 53);
+}
+@media (max-width: 1200px) {
+  .section-2 .offers .figcaption .price {
+    font-size: 16px;
+  }
 }
 .section-2 .offers .figcaption .line {
   display: block;
