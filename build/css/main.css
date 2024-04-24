@@ -761,7 +761,7 @@ label {
   background-color: rgb(222, 241, 247);
 }
 .section-2 .offers {
-  padding: 0px 15px 60px;
+  padding: 0px 15px 80px;
 }
 .section-2 .offers .offer {
   width: 30%;
@@ -876,4 +876,57 @@ label {
 .section-2 .offers .figcaption .location span {
   font-family: var(--font-text);
   color: rgb(53, 53, 53);
+}
+
+.services {
+  background-color: black;
+  width: 100%;
+  padding: 60px 0px;
+}
+
+.services-wrapper .services-header {
+  color: white;
+  text-align: center;
+}
+.services-wrapper .services-header span {
+  font-size: 14px;
+}
+.services-wrapper .services-header h3 {
+  font-size: calc(24px + 8 * (100vw - 360px) / 2100);
+  font-weight: 600;
+  line-height: 46px;
+}
+.services-wrapper .buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.services-wrapper .buttons-wrapper button {
+  padding: 0 5px;
+  color: white;
+  width: 200px;
+  height: 90px;
+  border: 1px solid white;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+@media (max-width: 500px) {
+  .services-wrapper .buttons-wrapper button {
+    width: 47%;
+    height: 60px;
+  }
+  .services-wrapper .buttons-wrapper button img {
+    height: 28px;
+    width: 28px;
+  }
+}
+.services-wrapper .buttons-wrapper img {
+  height: 32px;
+  width: 32px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(73deg) brightness(104%) contrast(102%);
 }
