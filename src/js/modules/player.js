@@ -9,6 +9,7 @@ playPauseButton.addEventListener('click', function () {
         video.play();
         playPauseButton.classList.add('pause');
         shawlVideo.style.backgroundColor = 'transparent';
+
     } else {
         video.pause();
         playPauseButton.classList.remove('pause');
