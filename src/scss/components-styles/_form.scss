@@ -3,14 +3,15 @@
   padding: 40px 0px;
 
   @media (max-width: 1136px) {
-        padding-top: 0;
-}
+    padding-top: 0;
+  }
 
   .form-section-content {
     position: relative;
     display: flex;
     align-items: center;
   }
+
   img {
     position: absolute;
     top: 0;
@@ -19,8 +20,10 @@
     height: 100%;
     object-fit: cover;
     z-index: 1;
+  }
 
-    @media (max-width: 1136px) {
+  @media (max-width: 1136px) {
+    .phone-woman {
       display: none;
     }
   }
@@ -31,12 +34,12 @@
     z-index: 10;
 
     @media (max-width: 1136px) {
-        margin: 0 auto;
-        padding: 15px;
+      margin: 0 auto;
+      padding: 15px;
     }
 
     @media (max-width: 480px) {
-        padding: 0;
+      padding: 0;
     }
 
     label {
@@ -111,5 +114,74 @@
     &:hover {
       background-color: rgb(51, 51, 51);
     }
+  }
+}
+
+.contacts-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  gap: 15px;
+  padding: 30px 0px;
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
+
+  & > div {
+    position: relative;
+    flex-grow: 1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(209, 216, 230, 0.719);
+  }
+  .image-wrapper {
+    position: relative;
+    border-radius: 8px;
+    background-color: black;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+  }
+
+  img {
+    position: unset;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%)
+      hue-rotate(73deg) brightness(104%) contrast(102%);
+  }
+
+  h5 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 15px;
+
+    @media (max-width: 700px) {
+      position: absolute;
+      margin-top: 0px;
+      top: 15px;
+      left: 90px;
+    }
+  }
+
+  p {
+    color: rgb(53, 53, 53);
+    font-size: 13px;
+
+    @media (max-width: 700px) {
+      position: absolute;
+      margin-top: 0px;
+      top: 40px;
+      left: 90px;
+    }
+  }
+
+  a {
+    color: black;
+    font-weight: 700;
+    font-size: 15px;
+    margin-top: 20px;
   }
 }

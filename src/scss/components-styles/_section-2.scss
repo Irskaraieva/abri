@@ -10,7 +10,7 @@
       width: 30%;
       position: relative;
       margin-top: 70px;
-      height: calc(340px + (420 - 340) * ((100vw - 320px) / 2000));
+      height: calc(420px + (480 - 420) * ((100vw - 320px) / 2000));
 
       @media (max-width: 900px) {
         margin-top: 50px;
