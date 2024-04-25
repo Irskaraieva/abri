@@ -1,31 +1,31 @@
 .section-1 {
   padding-top: 60px;
   padding-bottom: 60px;
-  
-    @media (max-width: 900px) {
-      padding-top: 30px;
-      padding-bottom: 30px;
-    }
-  
+
+  @media (max-width: 900px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
   .section-1-top {
     max-width: 900px;
     margin: 0 auto;
-    text-align: center;  
-  }
+    text-align: center;
 
-  & > span {
-    font-size: 14px;
-    color: rgb(53, 53, 53);
+   & > span {
+      font-size: 13px;
+      color: rgb(53, 53, 53);
+    }
   }
 
   h3 {
-    font-size: 1.8rem;
-    line-height: 3.8rem;
+    font-size: calc(24px + (24 - 16) * ((100vw - 360px) / 2100));
+    line-height: calc(30px + (30 - 20) * ((100vw - 360px) / 2100));
     font-weight: 600;
   }
 
   p {
-    margin-bottom: 20px;
+    margin: 20px 0px;
     color: rgb(53, 53, 53);
   }
 
@@ -71,15 +71,14 @@
     margin-top: 40px;
     gap: 5px;
 
-
-  img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
   }
 
   .overlay {

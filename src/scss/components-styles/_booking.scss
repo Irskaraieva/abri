@@ -1,0 +1,68 @@
+.booking {
+    width: 100%;
+    padding: 60px 0px;
+
+    @media (max-width: 600px) {
+        padding: 40px 0px;
+    }
+
+    h3 {
+        font-size: calc(24px + (24 - 16) * ((100vw - 360px) / 2100));
+        font-weight: 700;
+        line-height: calc(30px + (30 - 20) * ((100vw - 360px) / 2100));
+        text-align: center;
+    }
+
+    .platforms-wrapper {       
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-top: 40px;
+    }
+
+    .shopify, 
+    .airbnb,
+    .virgin-atlantic {
+        width: 30%;
+        padding: 32px 5px;
+        border: 1px solid rgba(182, 182, 182, 0.329);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media (max-width: 600px) {
+            width: 90%;
+        }
+
+        
+    }
+
+    .airbnb {
+        color: rgb(243, 38, 72);
+        font-weight: 600;
+
+        img {
+            height: 30px;
+            width: 30px;
+        }
+    }
+
+    .shopify {
+        color: black;
+        font-weight: 600;
+        font-style: italic;
+        
+        img {
+            height: 30px;
+            width: 30px;
+        }
+      
+    }
+
+    .virgin-atlantic {
+        img {            
+            max-width: 130px;
+        }
+    }
+}

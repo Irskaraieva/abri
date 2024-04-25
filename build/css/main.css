@@ -160,6 +160,66 @@ label {
   --text-color: #e3f4f7;
 }
 
+.booking {
+  width: 100%;
+  padding: 60px 0px;
+}
+@media (max-width: 600px) {
+  .booking {
+    padding: 40px 0px;
+  }
+}
+.booking h3 {
+  font-size: calc(24px + 8 * (100vw - 360px) / 2100);
+  font-weight: 700;
+  line-height: calc(30px + 10 * (100vw - 360px) / 2100);
+  text-align: center;
+}
+.booking .platforms-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.booking .shopify,
+.booking .airbnb,
+.booking .virgin-atlantic {
+  width: 30%;
+  padding: 32px 5px;
+  border: 1px solid rgba(182, 182, 182, 0.329);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 600px) {
+  .booking .shopify,
+  .booking .airbnb,
+  .booking .virgin-atlantic {
+    width: 90%;
+  }
+}
+.booking .airbnb {
+  color: rgb(243, 38, 72);
+  font-weight: 600;
+}
+.booking .airbnb img {
+  height: 30px;
+  width: 30px;
+}
+.booking .shopify {
+  color: black;
+  font-weight: 600;
+  font-style: italic;
+}
+.booking .shopify img {
+  height: 30px;
+  width: 30px;
+}
+.booking .virgin-atlantic img {
+  max-width: 130px;
+}
+
 .footer {
   background-color: rgb(24, 46, 65);
   text-align: center;
@@ -598,17 +658,17 @@ label {
   margin: 0 auto;
   text-align: center;
 }
-.section-1 > span {
-  font-size: 14px;
+.section-1 .section-1-top > span {
+  font-size: 13px;
   color: rgb(53, 53, 53);
 }
 .section-1 h3 {
-  font-size: 1.8rem;
-  line-height: 3.8rem;
+  font-size: calc(24px + 8 * (100vw - 360px) / 2100);
+  line-height: calc(30px + 10 * (100vw - 360px) / 2100);
   font-weight: 600;
 }
 .section-1 p {
-  margin-bottom: 20px;
+  margin: 20px 0px;
   color: rgb(53, 53, 53);
 }
 .section-1 .location {
@@ -767,7 +827,7 @@ label {
   width: 30%;
   position: relative;
   margin-top: 70px;
-  height: calc(300px + 120 * (100vw - 320px) / 2000);
+  height: calc(340px + 80 * (100vw - 320px) / 2000);
 }
 @media (max-width: 900px) {
   .section-2 .offers .offer {
