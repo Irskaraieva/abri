@@ -1,0 +1,115 @@
+.form-section {
+  width: 100%;
+  padding: 40px 0px;
+
+  @media (max-width: 1136px) {
+        padding-top: 0;
+}
+
+  .form-section-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+
+    @media (max-width: 1136px) {
+      display: none;
+    }
+  }
+
+  .form-wrapper {
+    padding: 30px;
+    max-width: 640px;
+    z-index: 10;
+
+    @media (max-width: 1136px) {
+        margin: 0 auto;
+        padding: 15px;
+    }
+
+    @media (max-width: 480px) {
+        padding: 0;
+    }
+
+    label {
+      font-size: 14px;
+    }
+
+    h3 {
+      font-size: calc(24px + (24 - 16) * ((100vw - 360px) / 2100));
+      line-height: calc(30px + (30 - 20) * ((100vw - 360px) / 2100));
+      font-weight: 600;
+
+      @media (max-width: 1136px) {
+        text-align: center;
+      }
+    }
+
+    p {
+      margin-top: 15px;
+      color: rgb(53, 53, 53);
+
+      @media (max-width: 1136px) {
+        text-align: center;
+      }
+    }
+  }
+
+  .data-name {
+    margin-top: 20px;
+    padding: 20px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(53, 53, 53);
+    font-size: 14px;
+
+    input {
+      margin-top: 5px;
+      padding: 10px;
+      width: 100%;
+    }
+  }
+
+  .name-wrapper {
+    width: 45%;
+  }
+
+  .last-name-wrapper {
+    width: 45%;
+  }
+
+  .message-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    textarea {
+      padding: 10px;
+    }
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 1px;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: rgb(51, 51, 51);
+    }
+  }
+}

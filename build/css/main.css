@@ -440,6 +440,115 @@ label {
     height: 20px;
   }
 }
+.form-section {
+  width: 100%;
+  padding: 40px 0px;
+}
+@media (max-width: 1136px) {
+  .form-section {
+    padding-top: 0;
+  }
+}
+.form-section .form-section-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.form-section img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+@media (max-width: 1136px) {
+  .form-section img {
+    display: none;
+  }
+}
+.form-section .form-wrapper {
+  padding: 30px;
+  max-width: 640px;
+  z-index: 10;
+}
+@media (max-width: 1136px) {
+  .form-section .form-wrapper {
+    margin: 0 auto;
+    padding: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .form-section .form-wrapper {
+    padding: 0;
+  }
+}
+.form-section .form-wrapper label {
+  font-size: 14px;
+}
+.form-section .form-wrapper h3 {
+  font-size: calc(24px + 8 * (100vw - 360px) / 2100);
+  line-height: calc(30px + 10 * (100vw - 360px) / 2100);
+  font-weight: 600;
+}
+@media (max-width: 1136px) {
+  .form-section .form-wrapper h3 {
+    text-align: center;
+  }
+}
+.form-section .form-wrapper p {
+  margin-top: 15px;
+  color: rgb(53, 53, 53);
+}
+@media (max-width: 1136px) {
+  .form-section .form-wrapper p {
+    text-align: center;
+  }
+}
+.form-section .data-name {
+  margin-top: 20px;
+  padding: 20px 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: rgb(53, 53, 53);
+  font-size: 14px;
+}
+.form-section .data-name input {
+  margin-top: 5px;
+  padding: 10px;
+  width: 100%;
+}
+.form-section .name-wrapper {
+  width: 45%;
+}
+.form-section .last-name-wrapper {
+  width: 45%;
+}
+.form-section .message-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form-section .message-wrapper textarea {
+  padding: 10px;
+}
+.form-section input[type=submit] {
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 1px;
+  transition: all 0.3s;
+}
+.form-section input[type=submit]:hover {
+  background-color: rgb(51, 51, 51);
+}
+
 .header {
   font-size: 2.4rem;
 }
