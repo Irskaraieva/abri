@@ -2,31 +2,40 @@
 
 .header {
   font-size: 2.4rem;
+  position: relative;
 
   @media (max-width: 1000px) {
     font-size: 2rem;
   }
 }
 
+.main-image {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(54%);
+}
+
 .header-wrapper {
-  height: 600px;
+  min-height: 600px;
   position: relative;
 
-  img {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    z-index: -1;
-    filter: brightness(54%);
+  @media (max-width: 720px) {
+    min-height: 400px;
   }
 }
 
 .header-content {
   width: 100%;
-
   background-color: rgba(3, 3, 3, 0.37);
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: rgba(3, 3, 3, 0.726);
+  }
 
   .container {
     display: flex;
@@ -57,16 +66,20 @@
     position: absolute;
     top: -800%;
     right: 0;
-    background-color: #2f477a;
+    background-color: #020202;
     flex-direction: column;
     justify-content: flex-start;
     gap: 20px;
     width: 100%;
     height: 0vh;
-    opacity: 0.95;
+    opacity: 0.98;
     align-items: center;
     padding: 80px 15px 35px;
     transition: all 0.3s ease-in-out;
+
+    @media (max-width: 1000px) {
+      align-items: flex-end;
+    }
   }
 
   body.no-scroll .nav {
@@ -90,7 +103,7 @@
   align-items: center;
   width: 100%;
 
-  li {
+  li a {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -112,14 +125,30 @@
 
   @media (max-width: 1000px) {
     flex-direction: column;
-    padding-top: 65px;
+    padding-top: 0px;
+    max-width: 300px;
+    align-items: flex-start;
   }
 }
 
 .nav-end {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+  .nav-end-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  @media (max-width: 1000px) {
+    display: flex;
+    width: 100%;
+    max-width: 300px;
+    align-items: start;
+
+    .nav-end-content {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
 
   a {
     font-size: 1.2rem;
@@ -152,20 +181,31 @@
   flex-direction: column;
   align-items: center;
   max-width: 760px;
+  padding: 0px 15px;
   margin: 80px auto;
   gap: 30px;
   font-family: var(--font-text);
   text-shadow: 0 0 2px black;
 
+  @media (max-width: 720px) {
+    margin-top: 35px;
+    margin-bottom: 0px;
+    padding-bottom: 30px;
+  }
+
   h2 {
-    font-size: 2.6rem;
+    font-size: 32px;
     color: white;
     font-weight: 600;
     text-align: center;
+
+    @media (max-width:420px) {
+      font-size: 26px;
+    }
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: white;
     text-align: center;
   }

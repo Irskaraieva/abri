@@ -24,10 +24,10 @@ main {
 
 .nav-mob-btn {
   --time: .2s;
-  --width: 35px;
+  --width: 32px;
   --height: 25px;
   --line-height: 1px;
-  --color: #2c2c2c;
+  --color: rgba(255, 255, 255, 0.836);
   --radius: 2px;
   height: var(--height);
   width: var(--width);
@@ -38,7 +38,7 @@ main {
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  top: 25px;
+  top: 20px;
   right: 20px;
 }
 @media (max-width: 1000px) {
@@ -191,6 +191,12 @@ label {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s;
+}
+.booking .shopify:hover,
+.booking .airbnb:hover,
+.booking .virgin-atlantic:hover {
+  background-color: rgba(182, 182, 182, 0.329);
 }
 @media (max-width: 600px) {
   .booking .shopify,
@@ -364,6 +370,7 @@ label {
 }
 .form-section .message-wrapper textarea {
   padding: 10px;
+  resize: none;
 }
 .form-section input[type=submit] {
   width: 100%;
@@ -447,6 +454,7 @@ label {
 
 .header {
   font-size: 2.4rem;
+  position: relative;
 }
 @media (max-width: 1000px) {
   .header {
@@ -454,11 +462,7 @@ label {
   }
 }
 
-.header-wrapper {
-  height: 600px;
-  position: relative;
-}
-.header-wrapper img {
+.main-image {
   position: absolute;
   top: 0;
   height: 100%;
@@ -468,9 +472,23 @@ label {
   filter: brightness(54%);
 }
 
+.header-wrapper {
+  min-height: 600px;
+  position: relative;
+}
+@media (max-width: 720px) {
+  .header-wrapper {
+    min-height: 400px;
+  }
+}
+
 .header-content {
   width: 100%;
   background-color: rgba(3, 3, 3, 0.37);
+  transition: all 0.3s;
+}
+.header-content:hover {
+  background-color: rgba(3, 3, 3, 0.726);
 }
 .header-content .container {
   display: flex;
@@ -499,17 +517,24 @@ label {
     position: absolute;
     top: -800%;
     right: 0;
-    background-color: #2f477a;
+    background-color: #020202;
     flex-direction: column;
     justify-content: flex-start;
     gap: 20px;
     width: 100%;
     height: 0vh;
-    opacity: 0.95;
+    opacity: 0.98;
     align-items: center;
     padding: 80px 15px 35px;
     transition: all 0.3s ease-in-out;
   }
+}
+@media (max-width: 1000px) and (max-width: 1000px) {
+  .nav {
+    align-items: flex-end;
+  }
+}
+@media (max-width: 1000px) {
   body.no-scroll .nav {
     top: 0;
     height: 100vh;
@@ -530,14 +555,14 @@ label {
   align-items: center;
   width: 100%;
 }
-.nav-list li {
+.nav-list li a {
   display: flex;
   align-items: center;
   gap: 10px;
   transition: all 0.3s;
 }
-.nav-list li:hover a,
-.nav-list li:hover span {
+.nav-list li a:hover a,
+.nav-list li a:hover span {
   color: rgb(204, 205, 206);
 }
 .nav-list .arrow-header {
@@ -548,14 +573,28 @@ label {
 @media (max-width: 1000px) {
   .nav-list {
     flex-direction: column;
-    padding-top: 65px;
+    padding-top: 0px;
+    max-width: 300px;
+    align-items: flex-start;
   }
 }
 
-.nav-end {
+.nav-end .nav-end-content {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+@media (max-width: 1000px) {
+  .nav-end {
+    display: flex;
+    width: 100%;
+    max-width: 300px;
+    align-items: start;
+  }
+  .nav-end .nav-end-content {
+    flex-direction: column;
+    align-items: start;
+  }
 }
 .nav-end a {
   font-size: 1.2rem;
@@ -585,19 +624,32 @@ label {
   flex-direction: column;
   align-items: center;
   max-width: 760px;
+  padding: 0px 15px;
   margin: 80px auto;
   gap: 30px;
   font-family: var(--font-text);
   text-shadow: 0 0 2px black;
 }
+@media (max-width: 720px) {
+  .header-aricle {
+    margin-top: 35px;
+    margin-bottom: 0px;
+    padding-bottom: 30px;
+  }
+}
 .header-aricle h2 {
-  font-size: 2.6rem;
+  font-size: 32px;
   color: white;
   font-weight: 600;
   text-align: center;
 }
+@media (max-width: 420px) {
+  .header-aricle h2 {
+    font-size: 26px;
+  }
+}
 .header-aricle p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: white;
   text-align: center;
 }

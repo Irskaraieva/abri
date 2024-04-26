@@ -1,9 +1,9 @@
 .nav-mob-btn {
     --time: .2s;
-    --width: 35px;
+    --width: 32px;
     --height: 25px;
     --line-height: 1px;
-    --color: #2c2c2c;
+    --color: rgba(255, 255, 255, 0.836);
     --radius: 2px;
 
     height: var(--height);
@@ -16,7 +16,7 @@
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    top: 25px;
+    top: 20px;
     right: 20px;
 
     @media (max-width: 1000px) {

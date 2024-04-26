@@ -30,6 +30,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: all .3s;
+
+        &:hover {
+            background-color: rgba(182, 182, 182, 0.329);
+        }
 
         @media (max-width: 600px) {
             width: 90%;

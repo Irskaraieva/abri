@@ -13,6 +13,14 @@ function mobileNav() {
         }
 
     };
+
+    window.addEventListener('resize', function () {
+        if (window.innerWidth > 1000) {
+            nav.style.display = 'flex';
+        } else if ((!navMobBtn.classList.contains('active')) && (window.innerWidth < 1000)) {
+            nav.style.display = 'none';
+        }
+    });
 }
 
 export default mobileNav;
