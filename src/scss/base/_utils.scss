@@ -18,6 +18,71 @@
 .no-scroll {
   overflow-y: hidden;
 }
+
 .rotate {
   transform: rotate(180deg);
+}
+
+.block-appear {
+  animation: blockAppear .8s ease-in;
+}
+
+.block-left-appear {
+  animation: blockLeftAppear .8s ease-in;
+}
+
+.block-right-appear {
+  animation: blockRightAppear .8s ease-in;
+}
+
+@keyframes blockLeftAppear {
+  from {   
+      transform: translateX(-50%);
+  }
+
+  to {
+      transform: translateX(0);
+  }
+}
+
+@keyframes blockRightAppear {
+  from {   
+      transform: translateX(50%);
+  }
+
+  to {
+      transform: translateX(0);
+  }
+}
+
+@keyframes blockAppear {
+  from {   
+      transform: translate(0px, 60px);
+  }
+
+  to {
+      transform: translate(0px, 0px);
+  }
+}
+
+@keyframes easeOpening {
+    
+  from {top: -80px;
+      opacity: 0;}
+  to {
+      top: 0;
+      opacity: 1;
+  }
+}
+
+@keyframes apearOpasity {
+    
+  from {
+      opacity: 0;
+      pointer-events: none;
+      }
+  to {
+      opacity: 1;
+      pointer-events: auto;
+  }
 }

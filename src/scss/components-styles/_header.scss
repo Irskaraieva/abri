@@ -20,17 +20,23 @@
 }
 
 .header-wrapper {
+  padding-top: 80px;
   min-height: 400px;
   position: relative;
 }
 
 .header-content {
   width: 100%;
-  background-color: rgba(3, 3, 3, 0.37);
+  background-color: rgba(3, 3, 3, 0.77);
   transition: all 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  animation: easeOpening 0.8s ease-out;
 
   &:hover {
-    background-color: rgba(3, 3, 3, 0.849);
+    background-color: rgba(3, 3, 3, 0.949);
   }
 
   .container {
@@ -46,6 +52,7 @@
     color: white;
     text-shadow: 0 0 2px black;
     transition: all 0.3s;
+    animation: apearOpasity .4s ease-in-out;
   }
 
   a {
@@ -90,15 +97,10 @@
   body.no-scroll .nav {
     top: 0;
     height: 100vh;
+    overflow-y: auto;
     transition: all 0.3s ease-out;
     animation: appearMenu 0.3s ease-in-out;
   }
-}
-
-.visible {
-  top: 0;
-  transition: 0.3 ease-in-out;
-  display: block;
 }
 
 .nav-list {
@@ -115,11 +117,11 @@
     height: 20px;
 
     img {
-      filter: brightness(0) saturate(100%) invert(100%) sepia(96%) saturate(16%) hue-rotate(261deg) brightness(105%) contrast(105%);
-      transition: all .4s;
+      filter: brightness(0) saturate(100%) invert(100%) sepia(96%) saturate(16%)
+        hue-rotate(261deg) brightness(105%) contrast(105%);
+      transition: all 0.4s;
     }
   }
-
 
   li div {
     display: flex;
@@ -132,7 +134,8 @@
     &:hover {
       cursor: pointer;
       .arrow-header {
-        filter: brightness(0) saturate(100%) invert(21%) sepia(94%) saturate(1087%) hue-rotate(88deg) brightness(96%) contrast(99%);
+        filter: brightness(0) saturate(100%) invert(21%) sepia(94%)
+          saturate(1087%) hue-rotate(88deg) brightness(96%) contrast(99%);
       }
     }
 
@@ -141,7 +144,7 @@
     .resources-wrapper {
       position: absolute;
       top: 100%;
-      left: 0px;
+      left: -15px;
       right: auto;
       width: 150px;
       padding: 0px;
@@ -154,6 +157,11 @@
       gap: 5px;
       transition: all 0.3s;
       animation: appearList 0.4s ease-out;
+      z-index: 20;
+
+      @media (max-width: 1000px) {
+        position: unset;
+      }
 
       li {
         padding: 5px 15px;
@@ -177,6 +185,14 @@
         color: #2e2e2e;
       }
     }
+  }
+
+  .features,
+  .packeges,
+  .resources {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
   }
 
   @media (max-width: 1000px) {

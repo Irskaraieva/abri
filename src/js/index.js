@@ -24,6 +24,55 @@ document.addEventListener("DOMContentLoaded", function () {
     const resourcesLink = document.getElementById("resources");
     const resourcesList = document.querySelector(".resources-wrapper");
     handleLinkClick(resourcesLink, resourcesList);
+
+
+const header = document.querySelector('.header-content');
+
+let lastScrollTop = 0;
+
+
+window.addEventListener('scroll', function() {
+    
+    const currentScroll = window.scrollY || document.documentElement.scrollTop;
+
+
+    if (currentScroll > lastScrollTop && currentScroll > header.offsetHeight) {
+    
+        header.style.transform = 'translateY(-100%)';
+    } else {
+
+        header.style.transform = 'translateY(0)';
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+
+    const blocks = document.querySelectorAll('.block');
+const blockLeft = document.querySelectorAll('.block-left');
+const blockRight = document.querySelectorAll('.block-right');
+
+blocks.forEach(block => {
+    const blockTop = block.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+    if (blockTop < windowHeight) {
+        block.classList.add('block-appear');
+    }
+});
+blockLeft.forEach(block => {
+    const blockTop = block.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+    if (blockTop < windowHeight) {
+        block.classList.add('block-left-appear');
+    }
+});
+blockRight.forEach(block => {
+    const blockTop = block.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+    if (blockTop < windowHeight) {
+        block.classList.add('block-right-appear');
+    }
+});
+
+});
 });
 
 const swiper = new Swiper('.swiper', {

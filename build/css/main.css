@@ -152,6 +152,62 @@ label {
   transform: rotate(180deg);
 }
 
+.block-appear {
+  animation: blockAppear 0.8s ease-in;
+}
+
+.block-left-appear {
+  animation: blockLeftAppear 0.8s ease-in;
+}
+
+.block-right-appear {
+  animation: blockRightAppear 0.8s ease-in;
+}
+
+@keyframes blockLeftAppear {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes blockRightAppear {
+  from {
+    transform: translateX(50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes blockAppear {
+  from {
+    transform: translate(0px, 60px);
+  }
+  to {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes easeOpening {
+  from {
+    top: -80px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes apearOpasity {
+  from {
+    opacity: 0;
+    pointer-events: none;
+  }
+  to {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
 :root {
   --container-width: 1230px;
   --container-padding: 15px;
@@ -479,17 +535,23 @@ label {
 }
 
 .header-wrapper {
+  padding-top: 80px;
   min-height: 400px;
   position: relative;
 }
 
 .header-content {
   width: 100%;
-  background-color: rgba(3, 3, 3, 0.37);
+  background-color: rgba(3, 3, 3, 0.77);
   transition: all 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  animation: easeOpening 0.8s ease-out;
 }
 .header-content:hover {
-  background-color: rgba(3, 3, 3, 0.849);
+  background-color: rgba(3, 3, 3, 0.949);
 }
 .header-content .container {
   display: flex;
@@ -503,6 +565,7 @@ label {
   color: white;
   text-shadow: 0 0 2px black;
   transition: all 0.3s;
+  animation: apearOpasity 0.4s ease-in-out;
 }
 .header-content a:hover {
   color: rgb(172, 172, 172);
@@ -544,16 +607,11 @@ label {
   body.no-scroll .nav {
     top: 0;
     height: 100vh;
+    overflow-y: auto;
     transition: all 0.3s ease-out;
     animation: appearMenu 0.3s ease-in-out;
   }
 }
-.visible {
-  top: 0;
-  transition: 0.3 ease-in-out;
-  display: block;
-}
-
 .nav-list {
   display: flex;
   gap: 25px;
@@ -590,7 +648,7 @@ label {
 .nav-list li div .resources-wrapper {
   position: absolute;
   top: 100%;
-  left: 0px;
+  left: -15px;
   right: auto;
   width: 150px;
   padding: 0px;
@@ -603,6 +661,14 @@ label {
   gap: 5px;
   transition: all 0.3s;
   animation: appearList 0.4s ease-out;
+  z-index: 20;
+}
+@media (max-width: 1000px) {
+  .nav-list li div .features-wrapper,
+  .nav-list li div .packeges-wrapper,
+  .nav-list li div .resources-wrapper {
+    position: unset;
+  }
 }
 .nav-list li div .features-wrapper li,
 .nav-list li div .packeges-wrapper li,
@@ -629,6 +695,13 @@ label {
 .nav-list li div .resources-wrapper span {
   font-size: 15px;
   color: #2e2e2e;
+}
+.nav-list .features,
+.nav-list .packeges,
+.nav-list .resources {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 @media (max-width: 1000px) {
   .nav-list {
@@ -765,7 +838,8 @@ label {
   z-index: 80;
 }
 
-img.tree {
+img.tree,
+.header-logo picture {
   position: unset;
   height: 32px;
   filter: brightness(0) saturate(100%) invert(17%) sepia(94%) saturate(1019%) hue-rotate(98deg) brightness(102%) contrast(104%);
@@ -951,7 +1025,7 @@ img.tree {
 
 .section-2 {
   width: 100%;
-  background-color: rgb(222, 241, 247);
+  background-color: rgba(209, 216, 230, 0.719);
 }
 .section-2 .offers {
   padding: 0px 15px 80px;

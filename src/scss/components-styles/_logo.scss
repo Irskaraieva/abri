@@ -13,9 +13,12 @@
     line-height: 26px;
     z-index: 80;
   }
+
+  
 }
 
-img.tree {
+img.tree,
+.header-logo picture {
   position: unset;
   height: 32px;
   filter: brightness(0) saturate(100%) invert(17%) sepia(94%) saturate(1019%) hue-rotate(98deg) brightness(102%) contrast(104%);
