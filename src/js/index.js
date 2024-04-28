@@ -3,6 +3,29 @@ import player from './modules/player.js';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 
+document.addEventListener("DOMContentLoaded", function () {
+    function handleLinkClick(link, list) {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            list.classList.toggle("hide");
+            const arrow = link.querySelector(".arrow-header");
+            arrow.classList.toggle("rotate");
+        });
+    }
+
+    const featuresLink = document.getElementById("features");
+    const featuresList = document.querySelector(".features-wrapper");
+    handleLinkClick(featuresLink, featuresList);
+
+    const packegesLink = document.getElementById("packeges");
+    const packegesList = document.querySelector(".packeges-wrapper");
+    handleLinkClick(packegesLink, packegesList);
+
+    const resourcesLink = document.getElementById("resources");
+    const resourcesList = document.querySelector(".resources-wrapper");
+    handleLinkClick(resourcesLink, resourcesList);
+});
+
 const swiper = new Swiper('.swiper', {
 
     spaceBetween: 18,
@@ -54,5 +77,4 @@ window.addEventListener('resize', function () {
         nav.style.display = 'none';
     }
 });
-
 

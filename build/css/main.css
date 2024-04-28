@@ -128,7 +128,9 @@ label {
 }
 
 .hide {
-  display: none;
+  display: none !important;
+  top: -50%;
+  height: 0;
 }
 
 .screen-reader-visual {
@@ -144,6 +146,10 @@ label {
 
 .no-scroll {
   overflow-y: hidden;
+}
+
+.rotate {
+  transform: rotate(180deg);
 }
 
 :root {
@@ -469,17 +475,12 @@ label {
   width: 100%;
   object-fit: cover;
   z-index: -1;
-  filter: brightness(54%);
+  filter: brightness(44%);
 }
 
 .header-wrapper {
-  min-height: 600px;
+  min-height: 400px;
   position: relative;
-}
-@media (max-width: 720px) {
-  .header-wrapper {
-    min-height: 400px;
-  }
 }
 
 .header-content {
@@ -488,7 +489,7 @@ label {
   transition: all 0.3s;
 }
 .header-content:hover {
-  background-color: rgba(3, 3, 3, 0.726);
+  background-color: rgba(3, 3, 3, 0.849);
 }
 .header-content .container {
   display: flex;
@@ -497,9 +498,14 @@ label {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-
+.header-content ul div h3,
 .header-content a {
-  color: rgb(231, 230, 230);
+  color: white;
+  text-shadow: 0 0 2px black;
+  transition: all 0.3s;
+}
+.header-content a:hover {
+  color: rgb(172, 172, 172);
 }
 
 .nav {
@@ -552,23 +558,81 @@ label {
   display: flex;
   gap: 25px;
   font-size: 1.2rem;
-  align-items: center;
+  align-items: start;
   width: 100%;
 }
-.nav-list li a {
+.nav-list .arrow-container {
+  display: inline-block;
+}
+.nav-list li div {
   display: flex;
   align-items: center;
+  text-align: center;
   gap: 10px;
   transition: all 0.3s;
+  position: relative;
 }
-.nav-list li a:hover a,
-.nav-list li a:hover span {
-  color: rgb(204, 205, 206);
+.nav-list li div:hover {
+  cursor: pointer;
+}
+.nav-list li div:hover .arrow-header {
+  color: rgb(1, 110, 7);
+}
+.nav-list li div .features-wrapper,
+.nav-list li div .packeges-wrapper,
+.nav-list li div .resources-wrapper {
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  right: auto;
+  width: 150px;
+  padding: 0px;
+  background-color: white;
+  color: black;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  gap: 5px;
+  transition: all 0.3s;
+  animation: appearList 0.4s ease-out;
+}
+.nav-list li div .features-wrapper li,
+.nav-list li div .packeges-wrapper li,
+.nav-list li div .resources-wrapper li {
+  padding: 5px 15px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+.nav-list li div .features-wrapper li:hover,
+.nav-list li div .packeges-wrapper li:hover,
+.nav-list li div .resources-wrapper li:hover {
+  background-color: #2e2e2e;
+}
+.nav-list li div .features-wrapper li:hover span,
+.nav-list li div .packeges-wrapper li:hover span,
+.nav-list li div .resources-wrapper li:hover span {
+  color: white;
+}
+.nav-list li div .features-wrapper span,
+.nav-list li div .packeges-wrapper span,
+.nav-list li div .resources-wrapper span {
+  font-size: 15px;
+  color: #2e2e2e;
 }
 .nav-list .arrow-header {
-  font-size: 20px;
+  display: inline-block;
+  width: 20px;
+  height: 10px;
   margin-top: -6px;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
 }
 @media (max-width: 1000px) {
   .nav-list {
@@ -623,18 +687,16 @@ label {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 760px;
-  padding: 0px 15px;
-  margin: 80px auto;
+  max-width: 720px;
+  padding: 60px 0px;
+  margin: 0px auto;
   gap: 30px;
   font-family: var(--font-text);
   text-shadow: 0 0 2px black;
 }
 @media (max-width: 720px) {
   .header-aricle {
-    margin-top: 35px;
-    margin-bottom: 0px;
-    padding-bottom: 30px;
+    padding: 30px 0px;
   }
 }
 .header-aricle h2 {
@@ -681,6 +743,16 @@ label {
     opacity: 0.95;
   }
 }
+@keyframes appearList {
+  from {
+    top: 210%;
+    opacity: 0;
+  }
+  to {
+    top: 100%;
+    opacity: 0.95;
+  }
+}
 .header-logo {
   font-family: "Rowdies", sans-serif;
   color: white;
@@ -694,13 +766,14 @@ label {
 .header-logo p {
   font-size: 26px;
   line-height: 26px;
+  z-index: 80;
 }
 
 img.tree {
   position: unset;
   height: 32px;
   filter: brightness(0) saturate(100%) invert(17%) sepia(94%) saturate(1019%) hue-rotate(98deg) brightness(102%) contrast(104%);
-  z-index: 100;
+  z-index: 80;
 }
 
 .header-mob-menu {
