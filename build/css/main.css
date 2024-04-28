@@ -271,7 +271,8 @@ label {
   color: rgb(243, 38, 72);
   font-weight: 600;
 }
-.booking .airbnb img {
+.booking .airbnb img,
+.booking .airbnb picture {
   height: 30px;
   width: 30px;
 }
@@ -280,11 +281,14 @@ label {
   font-weight: 600;
   font-style: italic;
 }
-.booking .shopify img {
+.booking .shopify img,
+.booking .shopify picture {
   height: 30px;
   width: 30px;
 }
-.booking .virgin-atlantic img {
+.booking .virgin-atlantic img,
+.booking .virgin-atlantic picture {
+  min-width: 100px;
   max-width: 130px;
 }
 

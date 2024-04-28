@@ -47,7 +47,8 @@
         color: rgb(243, 38, 72);
         font-weight: 600;
 
-        img {
+        img,
+        picture {
             height: 30px;
             width: 30px;
         }
@@ -58,7 +59,8 @@
         font-weight: 600;
         font-style: italic;
         
-        img {
+        img,
+        picture {
             height: 30px;
             width: 30px;
         }
@@ -66,7 +68,9 @@
     }
 
     .virgin-atlantic {
-        img {            
+        img,
+        picture {            
+            min-width: 100px;
             max-width: 130px;
         }
     }
