@@ -182,7 +182,7 @@ label {
 }
 @keyframes blockAppear {
   from {
-    transform: translate(0px, 60px);
+    transform: translate(0px, 40px);
   }
   to {
     transform: translate(0px, 0px);
@@ -571,7 +571,7 @@ label {
   transition: all 0.3s;
   animation: apearOpasity 0.4s ease-in-out;
 }
-.header-content a:hover {
+.header-content li a:hover {
   color: rgb(172, 172, 172);
 }
 
