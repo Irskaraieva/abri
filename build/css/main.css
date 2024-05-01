@@ -535,7 +535,8 @@ label {
   width: 100%;
   object-fit: cover;
   z-index: -1;
-  filter: brightness(44%);
+  transform: translate(0%, 0%);
+  filter: brightness(44%) sepia(4%) saturate(200%);
 }
 
 .header-wrapper {
