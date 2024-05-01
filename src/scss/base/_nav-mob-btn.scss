@@ -5,23 +5,21 @@
     --line-height: 1px;
     --color: rgba(255, 255, 255, 0.836);
     --radius: 2px;
-
     height: var(--height);
     width: var(--width);
     color: var(--color);
     z-index: 200;
-
     display: none;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    top: 20px;
+    top: 15px;
     right: 20px;
 
     @media (max-width: 1000px) {
         display: flex;
-      }
+    }
 }
 
 .burger-line {
